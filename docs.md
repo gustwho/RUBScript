@@ -3,6 +3,7 @@ Variables aren't really possible, so it's used for the true/false in the input/o
 
     define Button myButton
 define a button, named myButton. Simple enough. you can do these with other types, of course:
+
     define Button myButton
     define Button myOtherButton
     define Button anotherButton
@@ -12,15 +13,18 @@ define a button, named myButton. Simple enough. you can do these with other type
     define Display score
 
 To make a variable react to input, just do:
+
     notAUselessVariableISwear()
 Here, we just activate the node notAUselessVariableISwear.
 
 If you want to for example, hook a button to this node, you can do this:
+
     if (myButton) then
         notAUselessVariableISwear()
     end
 
 For `Display`s, you need to do this to change their values:
+
     score(0,0,1,0)
 
 # If, Else statements
@@ -48,3 +52,16 @@ You can also use AND and OR, of course.
         end
     end
 If switch and anotherButton is activated, it sets the score to 1. But if either of them are pressed, it sets the score to 2.
+
+# How to read
+Now that you made all of that, how do you even read these?
+
+    Switch1 Raycast3 -> AND -> Node4 
+    Switch1 Raycast3 -> AND -> [1,0,0,0]Display5 
+
+Well, you just hook them as you see them here.
+So you make a `Switch`, `Raycast`, `And` and a `Node4` block.
+
+`Switch1`. `Switch1` should be hooked to a `Raycast3` block, and to an `And` block. Then finally, that `And` block gets hooked to a `Node4` block.
+
+You get the point.
